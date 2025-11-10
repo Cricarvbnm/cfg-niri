@@ -379,6 +379,8 @@ binds {
     Super+B { spawn "firefox"; }
     Super+N { spawn "swaync-client --toggle-panel"; }
     Super+A { spawn-sh "copyq toggle"; }
+    Mod+E { spawn "thunar"; }
+    Mod+Shift+E { spawn-sh "thunar ~/Desktop"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -624,7 +626,6 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 
     Mod+Alt+Delete { spawn "reboot"; }
