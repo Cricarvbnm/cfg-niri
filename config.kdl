@@ -333,6 +333,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"^copyq$"#
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -373,6 +378,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Super+B { spawn "firefox"; }
     Super+N { spawn "swaync-client --toggle-panel"; }
+    Super+A { spawn-sh "copyq toggle"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
