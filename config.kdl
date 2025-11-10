@@ -629,6 +629,7 @@ binds {
     Ctrl+Alt+Delete { quit; }
 
     Mod+Alt+Delete { spawn "reboot"; }
+    Mod+Ctrl+Delete { spawn "poweroff"; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
