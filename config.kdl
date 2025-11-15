@@ -399,10 +399,10 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Super+B { spawn "firefox"; }
-    Super+N { spawn "swaync-client --toggle-panel"; }
-    Super+A { spawn-sh "copyq toggle"; }
-    Mod+E { spawn "thunar"; }
-    Mod+Shift+E { spawn-sh "thunar ~/Desktop"; }
+    Super+N hotkey-overlay-title="Show Notifications: swaync-client" { spawn "swaync-client --toggle-panel"; }
+    Super+A hotkey-overlay-title="Open Clipboards" { spawn-sh "copyq toggle"; }
+    Mod+E hotkey-overlay-title="Open a File Manager: thunar" { spawn "thunar"; }
+    Mod+Shift+E hotkey-overlay-title="Open Desktop: thunar"{ spawn-sh "thunar ~/Desktop"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -650,8 +650,8 @@ binds {
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Alt+Delete { spawn "reboot"; }
-    Mod+Ctrl+Delete { spawn "poweroff"; }
+    Mod+Alt+Delete hotkey-overlay-title="Reboot" { spawn "reboot"; }
+    Mod+Ctrl+Delete hotkey-overlay-title="Poweroff" { spawn "poweroff"; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
