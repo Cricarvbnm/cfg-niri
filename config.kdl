@@ -360,6 +360,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id=r#"thunar"# title=r#"^重命名"#
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -650,8 +655,8 @@ binds {
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Alt+Delete hotkey-overlay-title="Reboot" { spawn "reboot"; }
-    Mod+Ctrl+Delete hotkey-overlay-title="Poweroff" { spawn "poweroff"; }
+    Mod+Alt+Delete hotkey-overlay-title="Reboot" allow-when-locked=true { spawn "reboot"; }
+    Mod+Ctrl+Delete hotkey-overlay-title="Poweroff" allow-when-locked=true { spawn "poweroff"; }
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
