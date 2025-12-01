@@ -292,6 +292,7 @@ cursor {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "xdg-launch waybar"
 spawn-sh-at-startup "xdg-launch waybar-bot"
+spawn-sh-at-startup "fcitx5 --replace"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
